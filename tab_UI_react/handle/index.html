@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs UI</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="contents">
+            <div class="navbar">
+                <div class="nav__language ">
+                    <i class="language-icon fa-solid fa-code"></i>
+                    <span class="language-name">React</span>
+                    <div class="nav__hline"></div>
+                </div>
+                <div class="nav__language actived">
+                    <i class="language-icon fa-solid fa-gear"></i>
+                    <span class="language-name">Angular</span>
+                    <div class="nav__hline"></div>
+                </div>
+                <div class="nav__language">
+                    <i class="language-icon tab-icon fas fa-plus-circle"></i>
+                    <span class="language-name">Ember</span>
+                    <div class="nav__hline"></div>
+                </div>
+                <div class="nav__language">
+                    <i class="language-icon fa-solid fa-pen-nib"></i>
+                    <span class="language-name">Design</span>
+                    <div class="nav__hline"></div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="content__react ">
+                    <h3 class="content__name">React</h3>
+                    <p class="content__paragraph">
+                        Lots of people use React as the V in MVC. Since React makes no assumption about the rest of your technology stack,
+                        it's easy to try it out on a small feature in an existing project.
+                    </p>
+                </div>
+                <div class="content__react actived">
+                    <h3 class="content__name">Angular</h3>
+                    <p class="content__paragraph">
+                        HTML is great for declaring static documents, but it falters when we
+                        try to use it for declaring dynamic views in web-applications.
+                        AngularJS lets you extend HTML vocabulary for your application.
+                        The resulting environment is extraordinarily expressive, readable,
+                        and quick to develop.
+                    </p>
+                </div>
+                <div class="content__react">
+                    <h3 class="content__name">Ember</h3>
+                    <p class="content__paragraph">
+                        Ember.js is an open-source JavaScript application framework,
+                        based on the model-view-controller (MVC) pattern. It allows
+                        developers to create scalable single-page web application by 
+                        incorporating common idioms and best practices into the 
+                        framework. What is your favorite JS framework?    
+                    </p>
+                </div>
+                <div class="content__react">
+                    <h3 class="content__name">Design</h3>
+                    <p class="content__paragraph">
+                        Lots of people use React as the V in MVC. Since React makes no assumption about the rest of your technology stack,
+                        it's easy to try it out on a small feature in an existing project.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
