@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form đăng ký</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <form action="" method="post" id="form-signup">
+            <div class="form-header">
+                <h3 class="heading">Đăng ký tài khoản</h3>
+                <p class="desc">Chào mừng bạn đến với form validate &#128150;</p>
+            </div>
+
+            <span class="spacer"> </span>
+
+            <div class="form-group">
+                <label for="fullname" class="form-label">Tên đầy đủ</label>
+                <input type="text" id="fullname" name="fullname" class="form-input" placeholder="VD: Nguyễn Văn Triển">
+                <span class="text-validation"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="Nhập email của bạn">
+                <span class="text-validation"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input type="password" id="password" name="password" class="form-input" placeholder="Nhập mật khẩu">
+                <span class="text-validation"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="re-password" class="form-label">Nhập lại mật khẩu</label>
+                <input type="password" id="re-password" name="re-password" class="form-input" placeholder="Nhập lại mật khẩu">
+                <span class="text-validation"></span>
+            </div>
+
+            <button type="button" class="btn btn-signup">Đăng ký</button>
+        </form>
+    </div>
+
+    <script src="./validator.js"></script> -->
+    <script>
+        //Các check list được gọi
+        Validator({
+            form: '#form-signup',
+            errorMessage: '.text-validation',
+            rules: [
+                Validator.isRequired('#fullname', 'Tên của bạn không được bỏ trống!'),
+                Validator.isEmail('#email'),
+                Validator.minLength('#password', 6),
+                Validator.isConfirmed('#re-password', function(){
+                    return document.querySelector('#form-signup #password').value;
+                }, 'Mật khẩu nhập lại không chính xác!')
+            ]
+        })
+    </script>
+</body>
+</html>
