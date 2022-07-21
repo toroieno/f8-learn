@@ -16,7 +16,8 @@ html {
 
 body > div {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+
 }
 
 .main {
@@ -93,4 +94,14 @@ body > div {
     border-radius: 7px;
     margin-top: 20px;
     cursor: pointer;
+}
+
+.form-gender {
+    font-size: 1.6rem;
+    align-items: center;
+}
+.form-gender .form-input {
+    width: 1.7rem;
+    min-height: 1.7rem;
+    font-size: 1.0rem;
 }
