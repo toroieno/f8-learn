@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validate II</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <form action="" method="post" class="form-2" id="register-form">
+            <div class="form-header">
+                <h3 class="heading">Form đăng ký</h3>
+                <p class="desc">Chào mừng bạn đến với form đăng ký &#128151;</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="fullname" class="form-label">Tên đăng nhập</label>
+                <input type="text" name="fullname" class="form-input" rules="required" id="email" placeholder="NguyenVanTrien">
+                <span class="errorMessage"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" class="form-input" rules="required|email" id="name" placeholder="example@gmail.com">
+                <span class="errorMessage"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input type="password" name="password" class="form-input" rules="required|min:6" id="password">
+                <span class="errorMessage"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword" class="form-label">Nhập lại mật khẩu</label>
+                <input type="password" name="confirmPassword" class="form-input" rules="required|confirmPassword" id="confirmPassword">
+                <span class="errorMessage"></span>
+            </div>
+
+            <button class="btn btn-signup">Đăng ký</button>
+        </form>
+    </div>
+
+    <script src="./script.js"></script>
+    <script>
+        // 1. mong muốn -> kì vọng -> thành quả đạt được --> output?
+        Validator('#register-form')
+    </script>
+</body>
+</html>
