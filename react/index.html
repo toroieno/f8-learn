@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- JSX - babel-->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+    <!-- <script crossorigin src="https://unpkg.com/react@17.0.0/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17.0.0/umd/react-dom.production.min.js"></script>  -->
+
+</head>
+<body>
+    <h1>test</h1>
+    <div id="root"></div>
+    <script type="text/babel">
+        class Blog extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <h1 className="blog-title">Tieu de bai dang</h1>
+                        <p className="blog-description">noi dung bai dang chi tiet</p>
+                        <p className="blog-publish">thoi gian xuat ban</p>    
+                    </div>
+                );
+            }
+        }
+        const jsx = (
+            <React.Fragment>
+                <Blog />
+                <Blog />
+                <Blog />
+            </React.Fragment>
+        );
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        root.render(jsx);
+    </script>
+</body>
+</html>
